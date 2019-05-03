@@ -62,7 +62,9 @@ public class AccountResource {
             throw new InvalidPasswordException();
         }
         User user = userService.registerUser(managedUserVM, managedUserVM.getPassword());
-        mailService.sendActivationEmail(user);
+
+      //  发送邮件激活邮件
+         mailService.sendActivationEmail(user);
     }
 
     /**

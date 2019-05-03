@@ -44,7 +44,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/uaa?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
-        password:
+        password: chen
         hikari:
             auto-commit: false
             data-source-properties:
@@ -65,10 +65,11 @@ spring:
     liquibase:
         contexts: dev
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+        host: smtp.qq.com
+#        port: 25
+        username: 707631864@qq.com
+        password: szubgqixtwrkbfdb
+        properties.mail.smtp.ssl.enable: true
     messages:
         cache-duration: PT1S # 1 second, see the ISO 8601 standard
     thymeleaf:
@@ -108,7 +109,7 @@ jhipster:
             client-id: internal
             client-secret: internal
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: uaa@localhost
+        from: 707631864@qq.com
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
